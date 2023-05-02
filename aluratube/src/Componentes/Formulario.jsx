@@ -2,19 +2,20 @@ import React, { useState } from "react";
 import { AirtablePOST } from "../API/AirtablePOST";
 
 const Formulario = () => {
-  const [nome, setNome] = useState("");
+  const [tituloVideo, setTituloVideo] = useState("");
+  const [urlVideo, setUrlVideo] = useState("");
 
   const enviar = async (evento) => {
     evento.preventDefault();
 
     const data = {
-      title: nome,
+      title: tituloVideo,
+      url: urlVideo,
     };
 
     const resultado = await AirtablePOST(data);
-
     if (resultado) {
-      console.log("DEU CERTO");
+      console.log("DEU CERTO", data);
     } else {
       console.log("deu errado");
     }
@@ -25,8 +26,14 @@ const Formulario = () => {
       <input
         type='text'
         placeholder='nome'
-        value={nome}
-        onChange={(evento) => setNome(evento.target.value)}
+        value={tituloVideo}
+        onChange={(evento) => setTituloVideo(evento.target.value)}
+      />
+      <input
+        type='text'
+        placeholder='url'
+        value={urlVideo}
+        onChange={(evento) => setUrlVideo(evento.target.value)}
       />
       <button type='submit'>Enviar</button>
     </form>

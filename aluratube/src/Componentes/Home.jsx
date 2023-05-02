@@ -5,13 +5,21 @@ import Formulario from "./Formulario";
 const Home = () => {
   const [records, setRecords] = useState([]);
 
-  useEffect(() => {
+  /* useEffect(() => {
     const fetchData = async () => {
       const resultado = await AirtableGET();
       setRecords(resultado);
     };
     fetchData();
   }, []);
+ */
+
+  const fetchData = async () => {
+    const resultado = await AirtableGET();
+    setRecords(resultado);
+  };
+
+  fetchData();
 
   return (
     <div>
