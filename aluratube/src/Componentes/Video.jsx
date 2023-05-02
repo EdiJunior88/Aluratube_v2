@@ -14,14 +14,27 @@ const Video = () => {
         console.log("Erro ao obter vídeos:", erro);
       }
     };
-
     fetchVideos();
   }, [videos]);
+
+  const thumbnailVideo = (url) => {
+    const videoId = url.split("v=")[1];
+    return `https://img.youtube.com/vi/${videoId}/0.jpg`;
+  };
 
   return (
     <div>
       {videos.map((video) => (
-        <ReactPlayer key={video.id} url={video.fields.url} controls />
+        <div key={video.id}>
+          {/* <ReactPlayer url={video.fields.url} /> */}
+          <p>{video.fields.title}</p>
+          <a href={video.fields.url} target='_blank' rel='noreferrer'>
+            <img
+              src={thumbnailVideo(video.fields.url)}
+              alt={video.fields.Title}
+            />
+          </a>
+        </div>
       ))}
     </div>
   );

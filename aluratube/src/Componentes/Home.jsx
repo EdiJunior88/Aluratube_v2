@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Registros do Airtable</h1>
+      <h1>Aluratube v2</h1>
       <ul>
         {records.map((record) => (
           <div key={record.id}>
