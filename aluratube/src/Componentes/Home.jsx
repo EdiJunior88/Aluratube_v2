@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AirtableGET } from "../API/AirtableGET";
+import Formulario from "./Formulario";
 
 const Home = () => {
   const [records, setRecords] = useState([]);
@@ -23,6 +24,7 @@ const Home = () => {
           </div>
         ))}
       </ul>
+      <Formulario />
     </div>
   );
 };
