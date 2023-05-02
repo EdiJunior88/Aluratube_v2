@@ -8,16 +8,19 @@ const Formulario = () => {
   const enviar = async (evento) => {
     evento.preventDefault();
 
+    const dataAtual = new Date().toISOString();
+
     const data = {
       title: tituloVideo,
       url: urlVideo,
+      created_date: dataAtual,
     };
 
     const resultado = await AirtablePOST(data);
     if (resultado) {
       console.log("DEU CERTO", data);
     } else {
-      console.log("deu errado");
+      console.log("deu errado", data);
     }
   };
 
