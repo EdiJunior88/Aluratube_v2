@@ -13,6 +13,14 @@ export const AirtableGET = async () => {
       headers: {
         Authorization: `Bearer ${apiToken}`,
       },
+      params: {
+        sort: [
+          {
+            field: "created_date",
+            direction: "asc",
+          },
+        ],
+      },
     });
     return resposta.data.records;
   } catch (erro) {

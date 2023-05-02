@@ -1,25 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { AirtableGET } from "../API/AirtableGET";
 import Formulario from "./Formulario";
+import Video from "./Video";
 
 const Home = () => {
   const [records, setRecords] = useState([]);
 
-  /* useEffect(() => {
+  useEffect(() => {
     const fetchData = async () => {
       const resultado = await AirtableGET();
       setRecords(resultado);
     };
     fetchData();
-  }, []);
- */
-
-  const fetchData = async () => {
-    const resultado = await AirtableGET();
-    setRecords(resultado);
-  };
-
-  fetchData();
+  }, [records]);
 
   return (
     <div>
@@ -27,12 +20,14 @@ const Home = () => {
       <ul>
         {records.map((record) => (
           <div key={record.id}>
-            <p>{record.fields.title}</p>
-            <p>{record.fields.url}</p>
+            <p>titulo - {record.fields.title}</p>
+            <p>url - {record.fields.url}</p>
+            <p>data - {record.fields.created_date}</p>
           </div>
         ))}
       </ul>
       <Formulario />
+      <Video />
     </div>
   );
 };
