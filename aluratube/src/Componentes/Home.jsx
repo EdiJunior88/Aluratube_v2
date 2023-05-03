@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AirtableGET } from "../API/AirtableGET";
 import Formulario from "./Formulario";
 import Video from "./Video";
+import Cabecalho from "./Cabecalho";
 
 const Home = () => {
   const [records, setRecords] = useState([]);
@@ -16,16 +17,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Aluratube v2</h1>
-      <ul>
-        {records.map((record) => (
-          <div key={record.id}>
-            <p>titulo - {record.fields.title}</p>
-            <p>url - {record.fields.url}</p>
-            <p>data - {record.fields.created_date}</p>
-          </div>
-        ))}
-      </ul>
+      <Cabecalho />
       <Formulario />
       <Video />
     </div>

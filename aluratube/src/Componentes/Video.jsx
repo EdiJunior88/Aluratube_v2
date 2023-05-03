@@ -34,6 +34,7 @@ const Video = () => {
             <img
               src={thumbnailVideo(video.fields.url)}
               alt={video.fields.Title}
+              title="Clique para assistir"
             />
           </a>
         </div>
