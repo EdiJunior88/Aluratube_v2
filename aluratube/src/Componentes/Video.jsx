@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import ReactPlayer from "react-player";
 import { AirtableGET } from "../API/AirtableGET";
 
 const Video = () => {
   const [videos, setVideos] = useState([]);
 
+  //espera pela resposta da API
+  //se der certo, atualiza o estado
+  //e o useEffect é executado uma ÚNICA VEZ, quando o componente é renderizado
   useEffect(() => {
     const fetchVideos = async () => {
       try {
@@ -17,6 +19,7 @@ const Video = () => {
     fetchVideos();
   }, [videos]);
 
+  //adiciona uma Thumbnail do vídeo através do seu ID
   const thumbnailVideo = (url) => {
     const videoId = url.split("v=")[1];
     return `https://img.youtube.com/vi/${videoId}/0.jpg`;
@@ -26,7 +29,6 @@ const Video = () => {
     <div>
       {videos.map((video) => (
         <div key={video.id}>
-          {/* <ReactPlayer url={video.fields.url} /> */}
           <p>{video.fields.title}</p>
           <a href={video.fields.url} target='_blank' rel='noreferrer'>
             <img

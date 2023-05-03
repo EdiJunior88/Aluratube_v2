@@ -5,7 +5,7 @@ const apiToken = import.meta.env.VITE_API_TOKEN;
 const baseId = import.meta.env.VITE_API_BASE_ID;
 const tableName = import.meta.env.VITE_API_TABLE_NAME;
 
-const url = `https://cors.eu.org/https://api.airtable.com/v0/${baseId}/${tableName}`;
+const url = `https://api.airtable.com/v0/${baseId}/${tableName}`;
 
 export const AirtableGET = async () => {
   try {
