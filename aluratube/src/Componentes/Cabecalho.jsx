@@ -11,8 +11,6 @@ const Cabecalho = () => {
           <AluraTube width='100' height='50' />
         </div>
       </div>
-
-      <div className="background-image bg-cover bg-no-repeat bg-center h-44"></div>
     </>
   );
 };

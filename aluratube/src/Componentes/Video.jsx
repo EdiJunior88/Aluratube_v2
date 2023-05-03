@@ -26,17 +26,18 @@ const Video = () => {
   };
 
   return (
-    <div>
+    <div className='flex gap-4 p-4'>
       {videos.map((video) => (
-        <div key={video.id}>
-          <p>{video.fields.title}</p>
+        <div className="max-w-[210px]" key={video.id}>
           <a href={video.fields.url} target='_blank' rel='noreferrer'>
             <img
+              className='w-full h-auto object-cover	aspect-video'
               src={thumbnailVideo(video.fields.url)}
               alt={video.fields.Title}
-              title="Clique para assistir"
+              title='Clique para assistir'
             />
           </a>
+          <p>{video.fields.title}</p>
         </div>
       ))}
     </div>

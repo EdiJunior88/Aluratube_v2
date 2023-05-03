@@ -61,7 +61,11 @@ const Formulario = () => {
 
   return (
     <>
-      <button onClick={modalAberto}>+</button>
+      <button
+        className='bg-red-500 h-14 w-14 rounded-full fixed bottom-3.5 right-3.5'
+        onClick={modalAberto}>
+        <span className="text-white text-3xl font-bold leading-[0.8]">+</span>
+      </button>
 
       <Modal isOpen={modal} onRequestClose={modalFechado} ariaHideApp={false}>
         <div>

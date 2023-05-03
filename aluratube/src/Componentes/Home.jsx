@@ -3,6 +3,7 @@ import { AirtableGET } from "../API/AirtableGET";
 import Formulario from "./Formulario";
 import Video from "./Video";
 import Cabecalho from "./Cabecalho";
+import Secao from "./Secao";
 
 const Home = () => {
   const [records, setRecords] = useState([]);
@@ -18,6 +19,7 @@ const Home = () => {
   return (
     <div>
       <Cabecalho />
+      <Secao />
       <Formulario />
       <Video />
     </div>
