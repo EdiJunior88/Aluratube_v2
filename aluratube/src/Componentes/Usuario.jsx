@@ -2,11 +2,11 @@ import React from "react";
 import configuracao from "../JSON/Configuracao";
 import Video from "./Video";
 
-const Secao = () => {
+const Usuario = () => {
   return (
     <>
       <div className='background-image bg-cover bg-no-repeat bg-center h-60'></div>
-      <div className='flex items-center gap-2 h-28 py-4 px-8 bg-white'>
+      <div className='flex items-center gap-2 h-28 py-4 px-8 dark:text-white bg-white dark:bg-slate-900'>
         <img
           className='h-full rounded-full'
           src={`https://github.com/${configuracao.github}.png`}
@@ -21,4 +21,4 @@ const Secao = () => {
   );
 };
 
-export default Secao;
+export default Usuario;

@@ -26,7 +26,7 @@ const Video = () => {
   };
 
   return (
-    <div className="p-4 bg-slate-50">
+    <div className="py-4 px-8 bg-slate-50 dark:bg-slate-950 dark:text-white">
       <h2 className="w-full pb-4 font-bold">Geral</h2>
       <div className='flex gap-4'>
         {videos.map((video) => (
