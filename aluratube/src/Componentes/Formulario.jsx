@@ -62,9 +62,9 @@ const Formulario = () => {
   return (
     <>
       <button
-        className='bg-red-500 h-14 w-14 rounded-full fixed bottom-3.5 right-3.5'
-        onClick={modalAberto}>
-        <span className="text-white text-3xl font-bold leading-[0.8]">+</span>
+        className='bg-red-500 h-14 w-14 rounded-full fixed bottom-3.5 right-3.5 transition hover:opacity-75'
+        onClick={modalAberto}>        
+        <span className='text-white text-3xl font-bold leading-[0.7]'>+</span>
       </button>
 
       <Modal isOpen={modal} onRequestClose={modalFechado} ariaHideApp={false}>

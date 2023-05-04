@@ -26,20 +26,23 @@ const Video = () => {
   };
 
   return (
-    <div className='flex gap-4 p-4'>
-      {videos.map((video) => (
-        <div className="max-w-[210px]" key={video.id}>
-          <a href={video.fields.url} target='_blank' rel='noreferrer'>
-            <img
-              className='w-full h-auto object-cover	aspect-video'
-              src={thumbnailVideo(video.fields.url)}
-              alt={video.fields.Title}
-              title='Clique para assistir'
-            />
-          </a>
-          <p>{video.fields.title}</p>
-        </div>
-      ))}
+    <div className="p-4 bg-slate-50">
+      <h2 className="w-full pb-4 font-bold">Geral</h2>
+      <div className='flex gap-4'>
+        {videos.map((video) => (
+          <div className="max-w-[210px] transition hover:opacity-75" key={video.id}>
+            <a href={video.fields.url} target='_blank' rel='noreferrer'>
+              <img
+                className='w-full h-auto object-cover	aspect-video'
+                src={thumbnailVideo(video.fields.url)}
+                alt={video.fields.Title}
+                title='Clique para assistir'
+              />
+            <p className="py-2">{video.fields.title}</p>
+            </a>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

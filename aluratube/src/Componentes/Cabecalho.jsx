@@ -4,14 +4,12 @@ import { ReactComponent as AluraTube } from "../Imagens/Aluratube-logo.svg";
 
 const Cabecalho = () => {
   return (
-    <>
-      <div className='h-14 px-4 bg-blue-500'>
-        <div className='flex items-center'>
-          <LogoYoutube width='46' height='46' />
-          <AluraTube width='100' height='50' />
-        </div>
+    <div className='fixed w-full px-4 bg-slate-950'>
+      <div className='flex items-center h-14'>
+        <LogoYoutube width='46' height='46'/>
+        <AluraTube width='100' height='50' fill="white" />
       </div>
-    </>
+    </div>
   );
 };
 
