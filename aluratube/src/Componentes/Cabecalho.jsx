@@ -27,7 +27,7 @@ const Cabecalho = () => {
 
   return (
     <div>
-      <div className='flex justify-between items-center fixed w-full px-4 bg-white dark:bg-slate-900'>
+      <div className='fixed flex items-center justify-between w-full px-4 bg-white dark:bg-slate-900'>
         <div className='flex items-center h-14'>
           <LogoYoutube width='46' height='46' />
           <AluraTube width='100' height='50' fill={corLogo} />
@@ -37,7 +37,7 @@ const Cabecalho = () => {
         <div className='relative inline-block w-12 align-middle select-none'>
           <input
             type='checkbox'
-            className='botao-checkbox hidden'
+            className='hidden botao-checkbox'
             id='botao'
             name='botao'
             checked={tema}

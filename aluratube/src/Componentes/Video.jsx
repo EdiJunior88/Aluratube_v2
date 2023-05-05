@@ -16,7 +16,7 @@ const Video = () => {
       }
     };
     fetchVideos();
-  }, []);
+  }, [videos]);
 
   const thumbnailVideo = (url) => {
     const videoId = url.split("v=")[1];
@@ -25,10 +25,10 @@ const Video = () => {
 
   return (
     <div>
-      <div className='py-4 px-8 bg-slate-50 dark:bg-slate-950 dark:text-white'>
+      <div className='px-8 py-4 bg-slate-50 dark:bg-slate-950 dark:text-white'>
         <Busca onSearch={(buscaTitulo) => setBuscaTitulo(buscaTitulo)} />
         <h2 className='w-full pb-4 font-bold'>Geral</h2>
-        <div className='flex gap-4'>
+        <div className='flex flex-wrap gap-4'>
           {videos
             .filter((video) =>
               video.fields.title
@@ -37,11 +37,11 @@ const Video = () => {
             )
             .map((video) => (
               <div
-                className='max-w-[210px] transition hover:opacity-75'
+                className='max-w-[200px] transition hover:opacity-75'
                 key={video.id}>
                 <a href={video.fields.url} target='_blank' rel='noreferrer'>
                   <img
-                    className='w-full h-auto object-cover aspect-video'
+                    className='object-cover w-full h-auto aspect-video'
                     src={thumbnailVideo(video.fields.url)}
                     alt={video.fields.Title}
                     title='Clique para assistir'
