@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AirtablePOST } from "../API/AirtablePOST";
 import Modal from "react-modal";
-import { useForm, useFormState } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 const Formulario = () => {
   const [tituloVideo, setTituloVideo] = useState("");
@@ -9,6 +9,7 @@ const Formulario = () => {
   const [modal, setModal] = useState(false);
   const [mensagemAdicaoCorreta, setMensagemAdicaoCorreta] = useState("");
 
+  //Constantes do React Hook Forms
   const {
     register,
     handleSubmit,
@@ -62,61 +63,74 @@ const Formulario = () => {
   return (
     <div className='relative'>
       <button
-        className='bg-red-500 h-14 w-14 rounded-full fixed bottom-3.5 right-3.5 transition hover:opacity-75'
+        className='bg-red-500 h-10 w-10 sm:h-14 sm:w-14 rounded-full fixed bottom-3.5 right-3.5 transition hover:opacity-90 sm:hover:opacity-75'
         onClick={modalAberto}>
-        <span className='text-white text-3xl font-bold leading-[0.7]'>+</span>
+        <span className='text-white sm:text-3xl text-2xl sm:font-bold leading-[0.8] sm:leading-[0.7]'>
+          +
+        </span>
       </button>
 
       <Modal
         isOpen={modal}
         onRequestClose={modalFechado}
         ariaHideApp={false}
-        className='absolute w-full -translate-x-1/2 -translate-y-1/2 h-2/4 sm:w-2/6 sm:h-3/6 top-1/2 left-1/2 bg-emerald-500 dark:bg-black dark:text-white'>
+        className='absolute w-full -translate-x-1/2 -translate-y-1/2 bg-white h-4/6 sm:w-2/6 top-1/2 left-1/2 dark:bg-slate-900 dark:text-white'>
         <div>
           <button
             onClick={modalFechado}
-            className='flex justify-end w-full py-3 pr-6'>
+            className='flex justify-end w-full pt-2 pb-4 pr-6 text-xl font-semibold sm:pt-3 dark:text-white'>
             x
           </button>
         </div>
         <form onSubmit={handleSubmit(enviar)}>
           <div className='flex flex-col items-center w-full h-52'>
-            <div className='flex flex-col w-48 h-auto gap-4 text-xs sm:text-base'>
+            <div className='flex flex-col w-48 h-auto gap-4 text-xs sm:gap-4 sm:text-base'>
               <input
-                className='w-full border border-gray-300 rounded'
+                className='w-full py-3 pl-2 text-black border border-gray-300 rounded sm:py-1 placeholder:text-xs'
                 type='text'
-                placeholder='nome'
+                placeholder='Título do vídeo'
                 value={tituloVideo}
                 {...register("titulo", { required: "Titulo é obrigatório" })}
                 onChange={(evento) => setTituloVideo(evento.target.value)}
               />
-              {errors.titulo && <p>{errors.titulo.message}</p>}
+              {errors.titulo && (
+                <p className='text-xs dark:text-white text-slate-950'>
+                  {errors.titulo.message}
+                </p>
+              )}
 
               <input
-                className='w-full border border-gray-300 rounded'
+                className='w-full py-3 pl-2 text-black border border-gray-300 rounded sm:py-1 placeholder:text-xs'
                 type='url'
-                placeholder='url'
+                placeholder='URL'
                 value={urlVideo}
                 {...register("url", { required: "URL é obrigatório" })}
                 onChange={(evento) => setUrlVideo(evento.target.value)}
               />
-              {/* Mensagem de erro */}
-              {errors.url && <p>{errors.url.message}</p>}
 
-              <button type='submit' className='w-full bg-red-600 rounded'>
+              {/* Mensagem de erro */}
+              {errors.url && (
+                <p className='text-xs dark:text-white text-slate-950'>
+                  {errors.url.message}
+                </p>
+              )}
+
+              <button
+                type='submit'
+                className='w-full py-3 font-bold text-white bg-red-600 rounded sm:py-2'>
                 Enviar
               </button>
 
               {/* Mensagem de sucesso */}
               {mensagemAdicaoCorreta && (
-                <p className='text-center dark:text-white text-slate-950'>
+                <p className='text-xs text-center dark:text-white text-slate-950'>
                   {mensagemAdicaoCorreta}
                 </p>
               )}
 
               {/* Mensagem de erro */}
               {errors.submit && (
-                <p className='text-center dark:text-white text-slate-950'>
+                <p className='text-xs text-center dark:text-white text-slate-950'>
                   {errors.submit.message}
                 </p>
               )}
