@@ -1,14 +1,12 @@
 import React from "react";
 import Formulario from "./Formulario";
-import Cabecalho from "./Cabecalho";
 import Usuario from "./Usuario";
+import Cabecalho from "./Cabecalho";
 
 const Home = () => {
   return (
     <div>
-      <div>
-        <Cabecalho />
-      </div>
+      <Cabecalho />
       <Usuario />
       <Formulario />
     </div>
