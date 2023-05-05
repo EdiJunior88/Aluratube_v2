@@ -22,21 +22,19 @@ const Busca = ({ onSearch }) => {
   };
 
   return (
-    <div className='fixed top-2 left-0 right-0 flex items-center justify-center w-2/6 mx-auto z-0'>
+    <div className='fixed left-0 right-0 z-0 flex flex-col sm:flex-row items-center justify-center mx-auto sm:flex top-20 sm:top-1.5 sm:w-5/12'>
       <input
         type='text'
         placeholder='Buscar vídeos...'
         value={buscaPalavra}
         onChange={(event) => setBuscaPalavra(event.target.value)}
         onKeyDown={buscaEnter}
-        className='p-2 border border-gray-300 dark:border-slate-700 rounded w-full dark:bg-slate-950'
+        className='w-11/12 py-2 pl-2 border border-gray-300 rounded sm:pl-2 sm:w-full sm:px-0 dark:border-slate-700 dark:bg-slate-950'
       />
-      <button className='py-2 px-4' onClick={buscaClique}>
-        🔎
-      </button>
-      <button className='py-2 px-4' onClick={resetar}>
-        ❌
-      </button>
+      <div className='flex items-center justify-center w-full gap-16 pt-3 sm:gap-4 sm:pt-0 sm:pl-4 sm:w-20'>
+        <button onClick={buscaClique}>🔎</button>
+        <button onClick={resetar}>❌</button>
+      </div>
     </div>
   );
 };
