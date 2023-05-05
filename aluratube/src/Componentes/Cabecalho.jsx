@@ -50,7 +50,7 @@ const Cabecalho = () => {
             } block overflow-hidden h-6 rounded-full bg-slate-300 cursor-pointer`}>
             <span
               className={`${
-                tema ? "translate-x-6 bg-red-600" : "translate-x-0"
+                tema ? "translate-x-6 bg-red-700" : "translate-x-0"
               } inline-block w-6 h-6 transform bg-white rounded-full transition-transform duration-200 ease-in`}>
               {!tema ? "☀️" : "🌙"}
             </span>

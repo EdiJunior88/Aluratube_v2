@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { AirtableGET } from "../API/AirtableGET";
-import Cabecalho from "./Cabecalho";
 import Busca from "./Busca";
 
 const Video = () => {
@@ -17,7 +16,7 @@ const Video = () => {
       }
     };
     fetchVideos();
-  }, [videos]);
+  }, []);
 
   const thumbnailVideo = (url) => {
     const videoId = url.split("v=")[1];
