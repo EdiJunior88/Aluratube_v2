@@ -27,7 +27,7 @@ const Cabecalho = () => {
 
   return (
     <div>
-      <div className='fixed flex items-center justify-between w-full px-4 bg-white dark:bg-slate-900'>
+      <div className='fixed z-10 flex items-center justify-between w-full px-4 pb-24 bg-white sm:pb-0 sm:h-auto dark:bg-slate-900'>
         <div className='flex items-center h-14'>
           <LogoYoutube width='46' height='46' />
           <AluraTube width='100' height='50' fill={corLogo} />
