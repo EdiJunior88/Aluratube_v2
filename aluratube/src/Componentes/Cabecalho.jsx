@@ -3,10 +3,11 @@ import { ReactComponent as LogoYoutube } from "../Imagens/youtube-logo.svg";
 import { ReactComponent as AluraTube } from "../Imagens/Aluratube-logo.svg";
 
 const Cabecalho = () => {
-  const [temaEscuro, setTemaEscuro] = useState(false);
+  const [tema, setTema] = useState(false);
 
-  const mudarTema = (ligado) => {
-    setTemaEscuro(ligado);
+  // Função para mudar o tema
+  const mudarTema = () => {
+    setTema(!tema);
   };
 
   // Adiciona classe dark no body
@@ -14,14 +15,15 @@ const Cabecalho = () => {
   useEffect(() => {
     const root = document.documentElement;
 
-    if (temaEscuro) {
+    if (tema) {
       root.classList.add("dark");
     } else {
       root.classList.remove("dark");
     }
-  }, [temaEscuro]);
+  }, [tema]);
 
-  const corLogo = !temaEscuro ? "#020617" : "#fff";
+  // Cor do logo (Youtube) de acordo com a mudança do tema
+  const corLogo = !tema ? "#020617" : "#fff";
 
   return (
     <div>
@@ -30,11 +32,30 @@ const Cabecalho = () => {
           <LogoYoutube width='46' height='46' />
           <AluraTube width='100' height='50' fill={corLogo} />
         </div>
-        <button
-          className='bg-blue-500 text-white p-2 rounded'
-          onClick={() => mudarTema(!temaEscuro)}>
-          {!temaEscuro ? "Claro" : "Escuro"}
-        </button>
+
+        {/* Botão para mudar o tema */}
+        <div className='relative inline-block w-12 align-middle select-none'>
+          <input
+            type='checkbox'
+            className='botao-checkbox hidden'
+            id='botao'
+            name='botao'
+            checked={tema}
+            onChange={mudarTema}
+          />
+          <label
+            htmlFor='botao'
+            className={`${
+              tema ? "" : "bg-slate-300"
+            } block overflow-hidden h-6 rounded-full bg-slate-300 cursor-pointer`}>
+            <span
+              className={`${
+                tema ? "translate-x-6 bg-red-600" : "translate-x-0"
+              } inline-block w-6 h-6 transform bg-white rounded-full transition-transform duration-200 ease-in`}>
+              {!tema ? "☀️" : "🌙"}
+            </span>
+          </label>
+        </div>
       </div>
     </div>
   );
