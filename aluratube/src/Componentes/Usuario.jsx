@@ -5,15 +5,15 @@ import Video from "./Video";
 const Usuario = () => {
   return (
     <>
-      <div className='background-image bg-cover bg-no-repeat bg-center h-60'></div>
-      <div className='flex items-center gap-2 h-28 py-4 px-8 dark:text-white bg-white dark:bg-slate-900'>
+      <div className='block pt-40 bg-white bg-center bg-no-repeat bg-cover sm:p-0 sm:bg-[url("Imagens/banner.jpg")] dark:bg-slate-900 sm:h-60'></div>
+      <div className='flex items-center gap-2 px-8 py-4 bg-white h-28 dark:text-white dark:bg-slate-900'>
         <img
           className='h-full rounded-full'
           src={`https://github.com/${configuracao.github}.png`}
         />
         <div className='flex flex-col'>
-          <h2 className="text-2xl font-bold">{configuracao.name}</h2>
-          <p>{configuracao.job}</p>
+          <h2 className='text-xl font-bold sm:text-2xl'>{configuracao.name}</h2>
+          <p className='text-xs sm:text-base'>{configuracao.job}</p>
         </div>
       </div>
       <Video />
