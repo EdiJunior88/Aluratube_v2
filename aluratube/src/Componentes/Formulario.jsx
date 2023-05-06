@@ -75,7 +75,7 @@ const Formulario = () => {
         isOpen={modal}
         onRequestClose={modalFechado}
         ariaHideApp={false}
-        className='absolute w-full -translate-x-1/2 -translate-y-1/2 bg-white h-4/6 sm:w-2/6 top-1/2 left-1/2 dark:bg-slate-900 dark:text-white'>
+        className='absolute w-full -translate-x-1/2 -translate-y-1/2 bg-white h-2/5 sm:h-4/6 sm:w-2/6 top-[450px] sm:top-1/2 left-1/2 dark:bg-slate-900 dark:text-white'>
         <div>
           <button
             onClick={modalFechado}
@@ -85,7 +85,7 @@ const Formulario = () => {
         </div>
         <form onSubmit={handleSubmit(enviar)}>
           <div className='flex flex-col items-center w-full h-52'>
-            <div className='flex flex-col h-auto gap-4 text-xs xl:w-2/3 sm:gap-4 sm:text-base'>
+            <div className='flex flex-col w-3/4 h-auto gap-4 text-xs xl:w-2/3 sm:gap-4 sm:text-base'>
               <input
                 className='w-full py-3 pl-2 text-xs text-black border border-gray-300 rounded sm:py-1 placeholder:text-xs'
                 type='text'
