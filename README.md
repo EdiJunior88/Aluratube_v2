@@ -10,14 +10,14 @@
 
 <h3><strong>Modo Desktop</strong></h3>
 <p align="center">
-  <img src="">
+  <img src="./aluratube/src/Imagens/Aluratube-v2-README.jpg">
 </p>
 
 <br />
 
 <h3><strong>Modo Mobile</strong></h3>
 <p align="center">
-  <img src="" width="30%">
+  <img src="./aluratube/src/Imagens/Aluratube-v2-mobile-README.jpg" width="45%">
 </p>
 
 <hr>
