@@ -50,9 +50,9 @@ const Formulario = () => {
       setMensagemAdicaoCorreta("Vídeo adicionado!");
 
       if (resultado) {
-        console.log("DEU CERTO", data);
+        console.log("comunicação aceita com a API");
       } else {
-        console.log("deu errado", data);
+        console.log("comunicação recusada com a API");
       }
     } catch (erro) {
       //mensagem de erro
@@ -70,6 +70,7 @@ const Formulario = () => {
         </span>
       </button>
 
+      {/* Modal "janela" para apresentar o formulário de envio do vídeo (título + url) */}
       <Modal
         isOpen={modal}
         onRequestClose={modalFechado}

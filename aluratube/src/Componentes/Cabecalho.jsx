@@ -33,7 +33,7 @@ const Cabecalho = () => {
           <AluraTube width='100' height='50' fill={corLogo} />
         </div>
 
-        {/* Botão para mudar o tema */}
+        {/* Botão "toggle" para mudar o tema */}
         <div className='relative inline-block w-12 align-middle select-none'>
           <input
             type='checkbox'

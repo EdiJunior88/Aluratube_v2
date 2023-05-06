@@ -6,18 +6,21 @@ const Video = () => {
   const [videos, setVideos] = useState([]);
   const [buscaTitulo, setBuscaTitulo] = useState("");
 
+  //Espera pela resposta da API
+  //Caso dê algum erro aparece um alert (popup) na página
   useEffect(() => {
     const fetchVideos = async () => {
       try {
         const resposta = await AirtableGET();
         setVideos(resposta);
       } catch (erro) {
-        console.log("Erro ao obter vídeos:", erro);
+        alert("Erro ao obter vídeos, tente novamente mais tarde");
       }
     };
     fetchVideos();
   }, [videos]);
 
+  //Função para obter a thumbnail do vídeo
   const thumbnailVideo = (url) => {
     const videoId = url.split("v=")[1];
     return `https://img.youtube.com/vi/${videoId}/0.jpg`;
@@ -29,6 +32,7 @@ const Video = () => {
         <Busca onSearch={(buscaTitulo) => setBuscaTitulo(buscaTitulo)} />
         <h2 className='w-full pb-4 font-bold'>Geral</h2>
         <div className='flex flex-wrap gap-4'>
+          {/* filtrar vídeos pelo campo de busca */}
           {videos
             .filter((video) =>
               video.fields.title

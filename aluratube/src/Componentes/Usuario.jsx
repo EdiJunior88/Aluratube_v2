@@ -16,6 +16,8 @@ const Usuario = () => {
           <p className='text-xs sm:text-base'>{configuracao.job}</p>
         </div>
       </div>
+
+      {/* Componente Vídeo */}
       <Video />
     </>
   );

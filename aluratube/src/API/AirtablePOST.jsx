@@ -1,3 +1,4 @@
+//Componente que insere os dados na API do Airtable
 import React from "react";
 import axios from "axios";
 
@@ -21,6 +22,6 @@ export const AirtablePOST = async (data) => {
     });
     return resposta.data;
   } catch (erro) {
-    console.log("Erro de fetch do Airtable ", erro);
+    console.log("Erro ao obter os dados do Airtable");
   }
 };

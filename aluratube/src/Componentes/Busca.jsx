@@ -22,7 +22,7 @@ const Busca = ({ onSearch }) => {
   };
 
   return (
-    <div className='fixed left-0 right-0 z-0 flex flex-col sm:flex-row items-center justify-center mx-auto sm:flex top-14 sm:top-1.5 sm:w-5/12 z-20'>
+    <div className='fixed left-0 right-0 flex flex-col sm:flex-row items-center justify-center mx-auto sm:flex top-14 sm:top-1.5 sm:w-5/12 z-20'>
       <input
         type='text'
         placeholder='Buscar vídeos...'
