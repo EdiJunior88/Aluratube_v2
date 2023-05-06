@@ -1,6 +1,8 @@
 <h2>Aluratube v2</h2>
 
-<p>Um projeto que simula a página do Youtube registrando o título, url que poderão ser adicionados e aparecerão listados na tela principal</p>
+<p>Um projeto que simula um app do Youtube registrando o título e url de qualquer vídeo que podem ser adicionados à página principal.</p>
+
+<p>O app possui total responsividade para dispositivos mobile / tablets / desktop / monitores com resoluções altas, incluindo também o botão "modo noturno" deixando a página mais confortável visualmente.</p>
 
 <hr>
 
@@ -98,4 +100,4 @@
 
 <hr>
 
-<h4><b>Status do projeto:</b> 💭 Estudando</h4>
+<h4><b>Status do projeto:</b> ✅ Concluído</h4>
