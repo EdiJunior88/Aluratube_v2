@@ -27,11 +27,11 @@ const Video = () => {
   };
 
   return (
-    <div className='max-h-full dark:bg-slate-950 '>
-      <div className='px-8 pt-4 pb-[1.40rem] bg-slate-50 dark:bg-slate-950 dark:text-white'>
+    <div className='max-h-max dark:bg-slate-950'>
+      <div className='px-8 py-4 bg-slate-50 dark:bg-slate-950 dark:text-white'>
         <Busca onSearch={(buscaTitulo) => setBuscaTitulo(buscaTitulo)} />
         <h2 className='w-full pb-4 font-bold'>Geral</h2>
-        <div className='flex flex-wrap gap-4'>
+        <div className='flex flex-wrap items-start gap-4'>
           {/* filtrar vídeos pelo campo de busca */}
           {videos
             .filter((video) =>
