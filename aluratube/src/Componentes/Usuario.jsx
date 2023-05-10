@@ -10,6 +10,9 @@ const Usuario = () => {
         <img
           className='h-full rounded-full'
           src={`https://github.com/${configuracao.github}.png`}
+          alt='usuário github'
+          width='80'
+          height='80'
         />
         <div className='flex flex-col'>
           <h2 className='text-xl font-bold sm:text-2xl'>{configuracao.name}</h2>

@@ -50,6 +50,10 @@ const Formulario = () => {
       setMensagemAdicaoCorreta("Vídeo adicionado!");
 
       if (resultado) {
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+
         console.log("comunicação aceita com a API");
       } else {
         console.log("comunicação recusada com a API");

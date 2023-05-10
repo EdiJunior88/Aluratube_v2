@@ -18,7 +18,7 @@ const Video = () => {
       }
     };
     fetchVideos();
-  }, [videos]);
+  }, []);
 
   //Função para obter a thumbnail do vídeo
   const thumbnailVideo = (url) => {
@@ -49,6 +49,9 @@ const Video = () => {
                     src={thumbnailVideo(video.fields.url)}
                     alt={video.fields.Title}
                     title='Clique para assistir'
+                    width='200'
+                    height='150'
+                    loading='lazy'
                   />
                   <p className='py-2'>{video.fields.title}</p>
                 </a>
