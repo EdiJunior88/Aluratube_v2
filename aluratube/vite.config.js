@@ -3,12 +3,16 @@ import react from "@vitejs/plugin-react";
 import svgr from "vite-plugin-svgr";
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd());
+  // Carregue o arquivo env com base no 'modo' no diretório de trabalho atual.
+  // Defina o terceiro parâmetro como '' para carregar todos os env, independentemente do prefixo 'VITE_'.
+  const env = loadEnv(mode, process.cwd(), "");
 
   return {
     plugins: [react(), svgr()],
+
+    // vite config
     define: {
-      "process.env": env,
+      __APP_ENV__: env.APP_ENV,
     },
   };
 });

@@ -1,5 +1,4 @@
 //Componente que faz a leitura dos dados da API do Airtable
-import React from "react";
 import axios from "axios";
 
 const apiToken = import.meta.env.VITE_API_TOKEN;
