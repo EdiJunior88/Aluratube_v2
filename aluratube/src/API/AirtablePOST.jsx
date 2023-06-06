@@ -1,9 +1,10 @@
 //Componente que insere os dados na API do Airtable
 import axios from "axios";
 
-const apiToken = import.meta.env.VITE_API_TOKEN;
-const baseId = import.meta.env.VITE_API_BASE_ID;
-const tableName = import.meta.env.VITE_API_TABLE_NAME;
+const apiToken =
+  "patPND63jgJIACm7x.7a39160fba3d6068bdf58cc4700298c3cb8c1eecefac66cd3da90e9c7e7ceaad";
+const baseId = "appuDGSsnIKZOsWwk";
+const tableName = "Videos";
 
 const url = `https://api.airtable.com/v0/${baseId}/${tableName}`;
 
