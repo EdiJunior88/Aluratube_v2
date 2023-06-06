@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AirtablePOST } from "../API/AirtablePOST";
 import Modal from "react-modal";
 import { useForm } from "react-hook-form";

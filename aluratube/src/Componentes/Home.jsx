@@ -1,4 +1,3 @@
-import React from "react";
 import Formulario from "./Formulario";
 import Usuario from "./Usuario";
 import Cabecalho from "./Cabecalho";

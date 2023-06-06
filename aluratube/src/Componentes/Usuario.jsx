@@ -1,11 +1,10 @@
-import React from "react";
 import configuracao from "../JSON/Configuracao";
 import Video from "./Video";
 
 const Usuario = () => {
   return (
     <>
-      <div className='block pt-32 bg-white bg-center bg-no-repeat bg-cover sm:p-0 sm:bg-[url("Imagens/banner.jpg")] dark:bg-slate-900 sm:h-60'></div>
+      <div className='block pt-32 bg-white bg-center bg-no-repeat bg-cover sm:p-0 sm:bg-[url("Imagens/banner.webp")] dark:bg-slate-900 sm:h-60'></div>
       <div className='flex items-center gap-2 px-8 py-4 bg-white h-28 dark:text-white dark:bg-slate-900'>
         <img
           className='h-full rounded-full'

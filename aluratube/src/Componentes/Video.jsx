@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { AirtableGET } from "../API/AirtableGET";
 import Busca from "./Busca";
 
@@ -29,7 +29,7 @@ const Video = () => {
   return (
     <div className='max-h-max dark:bg-slate-950'>
       <div className='px-8 py-4 bg-slate-50 dark:bg-slate-950 dark:text-white'>
-        <Busca onSearch={(buscaTitulo) => setBuscaTitulo(buscaTitulo)} />
+        <Busca filtro={(buscaTitulo) => setBuscaTitulo(buscaTitulo)} />
         <h2 className='w-full pb-4 font-bold'>Geral</h2>
         <div className='flex flex-wrap items-start gap-4'>
           {/* filtrar vídeos pelo campo de busca */}

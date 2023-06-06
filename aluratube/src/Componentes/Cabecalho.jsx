@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ReactComponent as LogoYoutube } from "../Imagens/youtube-logo.svg";
 import { ReactComponent as AluraTube } from "../Imagens/Aluratube-logo.svg";
 
