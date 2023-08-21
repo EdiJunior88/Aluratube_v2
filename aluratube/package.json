@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "airtable": "^0.12.1",
+    "airtable": "^0.12.2",
     "axios": "^1.4.0",
     "class-validator": "^0.14.0",
     "dotenv": "^16.3.1",
