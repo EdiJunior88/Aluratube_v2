@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { ReactComponent as LogoYoutube } from "../Imagens/youtube-logo.svg";
-import { ReactComponent as AluraTube } from "../Imagens/Aluratube-logo.svg";
+import LogoYoutube from "./SVG/LogoYoutube";
+import AluraTube from "./SVG/AluraTube";
 
 const Cabecalho = () => {
   const [tema, setTema] = useState(false);
@@ -29,8 +29,8 @@ const Cabecalho = () => {
     <div>
       <div className='fixed z-10 flex items-center justify-between w-full px-4 pb-24 bg-white sm:pb-0 sm:h-auto dark:bg-slate-900'>
         <div className='flex items-center h-14'>
-          <LogoYoutube width='46' height='46' />
-          <AluraTube width='100' height='50' fill={corLogo} />
+          <LogoYoutube width='46' height='auto' />
+          <AluraTube width='100' height='auto' fill={corLogo} />
         </div>
 
         {/* Botão "toggle" para mudar o tema */}
