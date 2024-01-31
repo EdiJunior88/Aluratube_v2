@@ -10,77 +10,33 @@
 
 <hr>
 
-<h3><strong>Modo Desktop</strong></h3>
+<h3>Modo Desktop</h3>
 <p align="center">
   <img src="./aluratube/src/Imagens/Aluratube-v2-README.jpg">
 </p>
 
 <br />
 
-<h3><strong>Modo Mobile</strong></h3>
+<h3>Modo Mobile</h3>
 <p align="center">
   <img src="./aluratube/src/Imagens/Aluratube-v2-mobile-README.jpg" width="45%">
 </p>
 
 <hr>
 
-<h3><strong>Tecnologias Utilizadas</strong></h3>
+<h3>Tecnologias Utilizadas</h3>
 
-<table>
-  <tr>
-    <td>
-      <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-    </td>
-    <td>
-      <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-    </td>
-    <td>
-      <img src="https://img.shields.io/badge/JavaScript-756b2e?style=for-the-badge&logo=javascript&logoColor=white">
-    </td>
-     <td>
-      <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
-    </td>
-    <td>
-      <img src="https://img.shields.io/badge/AXIOS-116b29?style=for-the-badge&logo=axios&logoColor=61DAFB">
-    </td>
-  </tr>
+- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/1512/logo.png' alt='Airtable'/> [Airtable](https://airtable.com) – Spreadsheets as a Backend
+- <img width='25' height='25' src='https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png' alt='Autoprefixer'/> [Autoprefixer](https://github.com/postcss/autoprefixer) – CSS Pre-processors / Extensions
+- <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
+- <img width='25' height='25' src='https://img.stackshare.io/service/3339/rlFcjEdI.png' alt='PostCSS'/> [PostCSS](https://github.com/postcss/postcss) – CSS Pre-processors / Extensions
+- <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='axios'/> [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/service/8158/default_660b7c41c3ba489cb581eec89c04655404258c19.png' alt='Tailwind CSS'/> [Tailwind CSS](https://tailwindcss.com) – Front-End Frameworks
+- <img width='25' height='25' src='https://img.stackshare.io/service/21547/default_1aeac791cde11ff66cc0b20dcc6144eeb185c905.png' alt='Vite'/> [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
 
-  <tr>
-  <td>
-      <img src="https://img.shields.io/badge/Javascript%20Obfuscator-44473d?style=for-the-badge&logo=npm&logoColor=white">
-    </td>   
-    <td>
-      <img src="https://img.shields.io/badge/React%20Modal-c2c286?style=for-the-badge&logo=createreactapp&logoColor=white">
-    </td>
-     <td>
-      <img src="https://img.shields.io/badge/React%20Hooks%20Form-111461?style=for-the-badge&logo=reacthookform&logoColor=white">
-    </td>
-     <td>
-      <img src="https://img.shields.io/badge/VITEJS-72158f?style=for-the-badge&logo=vite&logoColor=white">
-    </td>
-     <td>
-      <img src="https://img.shields.io/badge/TailWindCSS-000?style=for-the-badge&logo=tailwindcss&logoColor=white">
-    </td>
-  </tr>
-</table>
-
-<hr>
-
-<h3><strong>Ferramentas Utilizadas</strong></h3>
-
-<table>
-  <tr>
-    <td>
-      <img src="https://badgen.net/npm/license/lodash">
-    </td>
-    <td>
-      <img src="https://img.shields.io/node/v/npm">
-    </td>
-    <td>
-      <img src="https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label">
-    </td>
-  </tr>
-</table>
+Para ver todas as tecnologias [clique aqui](/techstack.md)
 
 <hr>
 
