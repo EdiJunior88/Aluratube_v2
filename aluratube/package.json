@@ -13,7 +13,7 @@
     "airtable": "^0.12.2",
     "axios": "^1.6.7",
     "class-validator": "^0.14.1",
-    "dotenv": "^16.4.3",
+    "dotenv": "^16.4.4",
     "netlify-plugin-js-obfuscator": "^1.0.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
