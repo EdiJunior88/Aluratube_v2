@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "airtable": "^0.12.2",
-    "axios": "^1.6.7",
+    "axios": "^1.6.8",
     "class-validator": "^0.14.1",
     "dotenv": "^16.4.5",
     "netlify-plugin-js-obfuscator": "^1.0.21",
