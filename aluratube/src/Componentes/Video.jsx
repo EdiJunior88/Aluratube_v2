@@ -31,7 +31,7 @@ const Video = () => {
       <div className='px-8 py-4 bg-slate-50 dark:bg-slate-950 dark:text-white'>
         <Busca filtro={(buscaTitulo) => setBuscaTitulo(buscaTitulo)} />
         <h2 className='w-full pb-4 font-bold'>Geral</h2>
-        <div className='flex flex-wrap justify-around items-start gap-4 mx-14'>
+        <div className='flex flex-wrap items-start gap-4 mx-14'>
           {/* filtrar vídeos pelo campo de busca */}
           {videos
             .filter((video) =>
