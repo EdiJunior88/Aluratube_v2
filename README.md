@@ -6,7 +6,7 @@
 
 <hr>
 
-<strong>Link do projeto:</strong> <a href="https://aluratube-v2.netlify.app/" target="_blank" >https://aluratube-v2.netlify.app/</a>
+<strong>Link do projeto:</strong> <a href="https://aluratube-v2.vercel.app/" target="_blank" >https://aluratube-v2.vercel.app/</a>
 
 <hr>
 
@@ -42,7 +42,7 @@ Para ver todas as tecnologias [clique aqui](/techstack.md)
 
 <h3>Status do Deploy</h3>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/566b3b6b-c7da-44fd-8d08-fddbaa920e73/deploy-status)](https://app.netlify.com/sites/aluratube-v2/deploys)
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/aluratube-v2?style=for-the-badge)
 
 <hr>
 
